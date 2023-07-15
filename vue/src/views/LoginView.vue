@@ -97,13 +97,13 @@ export default {
       }).then((response) => {
         this.loading = false
         console.log(response)
-        if(response.data.msg.match("不存在")){
+        if(response.data.msg.match("登录失败，用户名不存在！" )&& response.data.code==='4008'){
           ElMessage({
             message: '用户不存在',
             type: 'warning',
           })
         }
-        else if(response.data.code === "2"){
+        else if(response.data.code === "4005" && response.data.msg.match("登录失败，密码不正确！")){
           ElMessage({
             message: '密码错误',
             type: 'warning',

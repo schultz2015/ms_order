@@ -139,6 +139,9 @@ export default {
   watch:{
     "$store.state.flag":{
       handler:function (newVal,oldVal) {
+
+        this.tabname='first'
+        this.show=true
         this.load()
       }
     }
@@ -189,10 +192,9 @@ export default {
       }).then((response) => {
             this.loading = false
             console.log("deleteOrder:"+response)
-            this.load()
-            this.tabname="first"
-          }
-      )
+        this.$store.commit('changeFlag');
+        console.log(this.$store.state.flag)
+          })
     },
     refuse(reg){
       this.loading = true
@@ -202,10 +204,9 @@ export default {
       }).then((response) => {
             this.loading = false
             console.log("updateOrder:"+response)
-            this.load()
-            this.tabname="first"
-          }
-      )
+        this.$store.commit('changeFlag');
+        console.log(this.$store.state.flag)
+          })
     },
     searching(sea,sel){
       alert(sea+sel)
@@ -263,7 +264,7 @@ export default {
               this.loading = false
               this.orders=response.data
               console.log("searchOrder:"+response)
-          this.filterTable()
+               this.filterTable()
             }
         )
       }
