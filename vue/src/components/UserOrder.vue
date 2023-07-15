@@ -95,6 +95,7 @@
 import request from "@/utils/request";
 import axios from 'axios'
 import OrderMod from "@/components/OrderMod";
+import {ElNotification} from "element-plus";
 export default {
   name: "UserOrder",
   components: {OrderMod},
@@ -192,6 +193,11 @@ export default {
       }).then((response) => {
             this.loading = false
             console.log("deleteOrder:"+response)
+        ElNotification({
+          title: 'Success',
+          message: '退订成功',
+          type: 'success',
+        })
         this.$store.commit('changeFlag');
         console.log(this.$store.state.flag)
           })
@@ -204,6 +210,11 @@ export default {
       }).then((response) => {
             this.loading = false
             console.log("updateOrder:"+response)
+        ElNotification({
+          title: 'Success',
+          message: '已拒绝请求',
+          type: 'success',
+        })
         this.$store.commit('changeFlag');
         console.log(this.$store.state.flag)
           })
