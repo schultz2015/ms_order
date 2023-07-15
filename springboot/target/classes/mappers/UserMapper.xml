@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springboot.mapper.UserMapper">
+	
+	<!-- 根据父级代号获取全国所有省/某省所有市/某市所有区的列表 -->
+	<!-- List<District> findByParent(String parent) -->
+	<update id="modify">
+		UPDATE
+		    user
+		SET
+		    username=#{username} ,
+			truename=#{truename},
+			tel=#{tel}
+		where
+		    userid=#{userid}
+	</update>
+	<update id="submitpassword">
+		UPDATE
+			user
+		SET
+			password=#{password}
+		where
+			userid=#{userid}
+	</update>
+
+<!--	<select id="findByName" resultType="com.example.springboot.pojo.User">-->
+<!--		SELECT-->
+<!--		    *-->
+<!--		FROM-->
+<!--		    user-->
+<!--		WHERE-->
+<!--		    username=#{username}-->
+<!--	</select>-->
+
+<!--	<select id="findById" resultType="com.example.springboot.pojo.User">-->
+<!--		SELECT-->
+<!--		    *-->
+<!--		FROM-->
+<!--		    user-->
+<!--		WHERE-->
+<!--		    userid=#{userid}-->
+<!--	</select>-->
+
+<!--	<select id="find" resultType="com.example.springboot.pojo.User">-->
+<!--		SELECT-->
+<!--		    *-->
+<!--		FROM-->
+<!--		    user-->
+<!--	</select>-->
+</mapper>
+
+
+
+
+
+
+
+

@@ -1,0 +1,114 @@
+
+        .errorMsg{
+            display:none;
+        }
+       #Image{
+           display: block;
+           position: fixed;
+           left: 50px;
+           top: 150px;
+       }
+        .login{
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -210px;
+            left: 50%;
+            margin-left: 300px;
+            background-color: rgb(85, 191, 192);
+            width: 400px;
+            height: 420px;
+            border-radius: 25px;
+            text-align: center;
+            padding: 5px 40px;
+            box-sizing: border-box;
+        }
+        .register{
+            position: absolute;
+            top: 50%;
+            margin-top: -300px;
+            left: 50%;
+            margin-left: 300px;
+            background-color: rgb(85, 191, 192);
+            width: 400px;
+            height: 584px;
+            border-radius: 25px;
+            text-align: center;
+            padding: 5px 40px;
+            box-sizing: border-box;
+            display: none;
+        }
+
+        #loginTitle,#registerTitle{
+            color: rgba(255, 255, 255, 1);
+            font-size: 42px;
+            font-weight: 600;
+        }
+
+        .usn,.psw,.pswagain,.trn,.tel{
+            background-color: rgba(255, 255, 255, 1);
+            width: 300px;
+            height: 48px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 2px solid #ffffff;
+            outline: none;
+            font-size: 22px;
+            text-indent:1em;
+        }
+        .btn{
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 38%;
+            height: 48px;
+            border-radius: 8px;
+            border: 1px solid rgb(85, 191, 192);
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: 600;
+            color: rgb(85, 191, 192);
+        }
+        .btn:hover{
+            background-color: rgb(85, 191, 192);
+            color:rgb(256,256,256);
+            border: 3px solid rgb(255, 255, 255);
+        }
+        #logPageSwitchButton{
+            color: rgba(255, 255, 255,1);
+            font-family: neue machina,sans-serif;
+        }
+
+        #regPageSwitchButton {
+            color: rgba(255, 255, 255, 1);
+            font-family: neue machina,sans-serif;
+        }
+        @media screen and (max-width: 1600px) {
+            .login{
+                margin-left: 280px;
+            }
+            .register {
+                margin-left: 280px;
+            }
+        }
+        @media screen and (max-width: 1500px) {
+            #Image{
+                display:none;
+            }
+            .login{
+                margin-left: -400px;
+            }
+            .register {
+                margin-left: -400px;
+            }
+        }
+
+        @media screen and (max-width: 1300px) {
+            #Image{
+                display:none;
+            }
+            .login{
+                margin-left: -200px;
+            }
+            .register {
+                margin-left: -200px;
+            }
+        }

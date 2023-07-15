@@ -1,0 +1,61 @@
+
+.backToTop a,.foot a{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    font: 22px neue machina,sans-serif;
+}
+.backToTop{
+    position: fixed;
+    text-align: center;
+    width: 50px;
+    border-radius: 12px;
+    border: 3px solid rgb(85, 191, 192);
+    background-color: rgb(85, 191, 192);
+    top: 70px;
+    right: 20px;
+    z-index: 5;
+}
+.foot{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    background-color: rgb(29, 32, 37);
+    height: 400px;
+    z-index: 0;
+}
+.foot #logoImage{
+    margin-top: 40px;
+    width: 207px;
+    height: 360px;
+}
+.foot #animeshellImage{
+    height: 256px;
+}
+/*.foot #semicircle{*/
+/*    height: 104px;*/
+/*    background-color: rgb(252, 96, 15);*/
+/*    border-radius: 0 0 104px 104px;*/
+/*}*/
+.foot ul{
+    list-style-type:none;
+    color: rgb(255, 255, 255);
+    padding-left: 80px;
+}
+#introduce{
+    margin-top: 50px;
+    font: 50px bold;
+    font-family:SmilySans,sans-serif;
+}
+.intro{
+    padding-top: 10px;
+    font-family: neue machina,sans-serif;
+}
+#ls{
+    display: block;
+}
+#user{
+    display: none;
+}
